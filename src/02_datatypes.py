@@ -13,10 +13,11 @@ y = "7"
 
 # Write a print statement that combines x + y into the integer value 12
 
-# YOUR CODE HERE
+# Performing a type conversion for y with integer allows us to add the two values numerically
 print(x + int(y))
 
 # Write a print statement that combines x + y into the string value 57
 
 # YOUR CODE HERE
+# Type conversion of string allows us to effectively concatenate the two values as strings
 print(str(x)+y)
