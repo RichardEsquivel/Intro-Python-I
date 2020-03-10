@@ -38,7 +38,7 @@ print("Distance is: {:.2f}".format(dist(a, b)))
 # YOUR CODE HERE
 def print_tuple(x):
     """Prints all single values in a tuple *object indicates more than one object will be separated by a new line """
-    separated_tuple = [i for i in x]
+    separated_tuple = (i for i in x)
     print(*separated_tuple, sep='\n')
 
 
