@@ -5,27 +5,34 @@ methods, and the os module, which gives you access to lower-
 level operating system functionality.
 """
 
+import os
 import sys
 # See docs for the sys module: https://docs.python.org/3.7/library/sys.html
 
 # Print out the command line arguments in sys.argv, one per line:
 # YOUR CODE HERE
-
+print("This script is called:", (sys.argv[0]))
+print("These are the number of arguments:", len(sys.argv))
+print("The arguments are:", sys.argv)
+# Or
+for x in sys.argv:
+    print(x)
 # Print out the OS platform you're using:
 # YOUR CODE HERE
-
+print("This is the OS platform I am using:", sys.platform)
 # Print out the version of Python you're using:
 # YOUR CODE HERE
+print("This is the version of Python I'm using:", sys.version)
 
 
-import os
 # See the docs for the OS module: https://docs.python.org/3.7/library/os.html
 
 # Print the current process ID
 # YOUR CODE HERE
-
+print("This is the current process ID:", os.getpid())
 # Print the current working directory (cwd):
 # YOUR CODE HERE
-
+print("This is the current working directory:", os.getcwd())
 # Print out your machine's login name
 # YOUR CODE HERE
+print("This is my machine's login name:", os.getlogin())
