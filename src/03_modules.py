@@ -13,7 +13,10 @@ import sys
 # YOUR CODE HERE
 print("This script is called:", (sys.argv[0]))
 print("These are the number of arguments:", len(sys.argv))
-print("The arguments are:", [sys.argv])
+print("The arguments are:", sys.argv)
+# Or
+for x in sys.argv:
+    print(x)
 # Print out the OS platform you're using:
 # YOUR CODE HERE
 print("This is the OS platform I am using:", sys.platform)
