@@ -6,13 +6,25 @@
 
 # YOUR CODE HERE
 
-print(f1(1, 2))
 
-# Write a function f2 that takes any number of integer arguments and prints the
-# sum.
+def f1(num1, num2):
+    return num1 + num2
+
+
+print('Sum of 2 numbers:', f1(1, 2))
+
+# Write a function f2 that takes any number of integer arguments and prints the sum.
 # Note: Google for "python arbitrary arguments" and look for "*args"
 
 # YOUR CODE HERE
+
+
+def f2(*args):
+    theSum = 0
+    for arg in args:
+        theSum += arg
+    return theSum
+
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
@@ -21,45 +33,52 @@ print(f2(7, 9, 1, 3, 4, 9, 0))  # Should print 33
 
 a = [7, 6, 5, 4]
 
-# How do you have to modify the f2 call below to make this work?
-print(f2(a))    # Should print 22
+# # How do you have to modify the f2 call below to make this work?
 
-# Write a function f3 that accepts either one or two arguments. If one argument,
-# it returns that value plus 1. If two arguments, it returns the sum of the
-# arguments.
-# Note: Google "python default arguments" for a hint.
+print('This uses the * to unpack an iterable list:', f2(*a))    # Should print 22
 
-# YOUR CODE HERE
+# # Write a function f3 that accepts either one or two arguments. If one argument,
+# # it returns that value plus 1. If two arguments, it returns the sum of the
+# # arguments.
+# # Note: Google "python default arguments" for a hint.
 
-print(f3(1, 2))  # Should print 3
-print(f3(8))     # Should print 9
+# # YOUR CODE HERE
 
 
-# Write a function f4 that accepts an arbitrary number of keyword arguments and
-# prints out the keys and values like so:
-#
-# key: foo, value: bar
-# key: baz, value: 12
-#
-# Note: Google "python keyword arguments".
+def f3(*arguments, value=argument+1):
+    theSum = 0
+    for argument in arguments:
+        theSum += argument
+        return theSum
+# print(f3(1, 2))  # Should print 3
+# print(f3(8))     # Should print 9
 
-# YOUR CODE HERE
 
-# Should print
-# key: a, value: 12
-# key: b, value: 30
-f4(a=12, b=30)
+# # Write a function f4 that accepts an arbitrary number of keyword arguments and
+# # prints out the keys and values like so:
+# #
+# # key: foo, value: bar
+# # key: baz, value: 12
+# #
+# # Note: Google "python keyword arguments".
 
-# Should print
-# key: city, value: Berkeley
-# key: population, value: 121240
-# key: founded, value: "March 23, 1868"
-f4(city="Berkeley", population=121240, founded="March 23, 1868")
+# # YOUR CODE HERE
 
-d = {
-    "monster": "goblin",
-    "hp": 3
-}
+# # Should print
+# # key: a, value: 12
+# # key: b, value: 30
+# f4(a=12, b=30)
 
-# How do you have to modify the f4 call below to make this work?
-f4(d)
+# # Should print
+# # key: city, value: Berkeley
+# # key: population, value: 121240
+# # key: founded, value: "March 23, 1868"
+# f4(city="Berkeley", population=121240, founded="March 23, 1868")
+
+# d = {
+#     "monster": "goblin",
+#     "hp": 3
+# }
+
+# # How do you have to modify the f4 call below to make this work?
+# f4(d)
