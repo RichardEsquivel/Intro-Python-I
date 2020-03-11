@@ -45,13 +45,13 @@ print('This uses the * to unpack an iterable list:', f2(*a))    # Should print 2
 # # YOUR CODE HERE
 
 
-def f3(*arguments, value=argument+1):
-    theSum = 0
-    for argument in arguments:
-        theSum += argument
-        return theSum
-# print(f3(1, 2))  # Should print 3
-# print(f3(8))     # Should print 9
+def f3(first, second=1):
+    totalSum = first + second
+    return totalSum
+
+
+print(f3(1, 2))  # Should print 3
+print(f3(8))     # Should print 9
 
 
 # # Write a function f4 that accepts an arbitrary number of keyword arguments and
@@ -63,22 +63,26 @@ def f3(*arguments, value=argument+1):
 # # Note: Google "python keyword arguments".
 
 # # YOUR CODE HERE
+def f4(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}:{value}")
+
 
 # # Should print
 # # key: a, value: 12
 # # key: b, value: 30
-# f4(a=12, b=30)
+f4(a=12, b=30)
 
 # # Should print
 # # key: city, value: Berkeley
 # # key: population, value: 121240
 # # key: founded, value: "March 23, 1868"
-# f4(city="Berkeley", population=121240, founded="March 23, 1868")
+f4(city="Berkeley", population=121240, founded="March 23, 1868")
 
-# d = {
-#     "monster": "goblin",
-#     "hp": 3
-# }
+d = {
+    "monster": "goblin",
+    "hp": 3
+}
 
 # # How do you have to modify the f4 call below to make this work?
-# f4(d)
+f4(**d)
