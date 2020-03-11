@@ -4,11 +4,13 @@
 
 # Read a number from the keyboard
 num = input("Enter a number: ")
-num = int(num)
-# Print out "Even!" if the number is even. Otherwise print "Odd"
+# I implemented a type check to confirm that the characters entered in where all digits if not if gives the else error message.
+if num.isdigit() is True:
+    num = int(num)
 
-# YOUR CODE HERE
-if num % 2 == 0:
-    print("Even!")
-elif num % 2 == 1:
-    print("Odd!")
+    if num % 2 == 0:
+        print("Even!")
+    if num % 2 == 1:
+        print("Odd!")
+else:
+    print("You didn't type a number try again!")
