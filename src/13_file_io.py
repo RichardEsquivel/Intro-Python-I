@@ -10,7 +10,10 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
-
+# with open takes two commands by default it goes with r for read, can capture this return of data in a variable and print out
+with open('foo.txt') as file:
+    i_can_read = file.read()
+    print(i_can_read)
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
 # then close the file. Open up "bar.txt" and inspect it to make

@@ -45,7 +45,7 @@ month = datetime.now().month
 year = datetime.now().year
 
 # 1 arg should set month
-if len(args == 2):
+if len(args == 1):
     month = int(args[1])
     year = int(args[2])
 # 2 args should set the  month and yuear
