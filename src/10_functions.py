@@ -10,7 +10,7 @@ if num.isdigit() is True:
 
     if num % 2 == 0:
         print("Even!")
-    if num % 2 == 1:
+    else:
         print("Odd!")
 else:
     print("You didn't type a number try again!")
