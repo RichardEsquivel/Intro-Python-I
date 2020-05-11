@@ -6,15 +6,15 @@
 
 
 class LatLon:
-
-
-def __init__(self, lat=0, long=0)
+    def __init__(self, lat=0, lon=0):
+        self.lat = lat
+        self.lon = lon
 
 # Make a class Geocache that can be passed parameters `name`, `difficulty`,
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
-# YOUR CODE HERE
-
+class Waypoint(LatLon):
+    def
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521
 
 # YOUR CODE HERE

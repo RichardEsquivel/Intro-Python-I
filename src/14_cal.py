@@ -33,26 +33,28 @@ from datetime import datetime
 
 # will be format 14_cal.py [month][year]
 
-args = sys.argv
+args = len(sys.argv)
 
-print(args)
-# Read argument values submitted
+print("Number of arguments given on command line", args)
 
-# Check that both values are valid
+# If user did not specify a month and year default to outputting the current month and date value
+if args == 1:
+    month = datetime.now().month
+    year = datetime.now().year
 
-# Default to current month and year
-month = datetime.now().month
-year = datetime.now().year
+# 2 if user only specified the month and not the year
+elif args == 2:
+    month = int(sys.argv[1])
+    year = datetime.now().year
 
-# 1 arg should set month
-if len(args == 1):
-    month = int(args[1])
-    year = int(args[2])
-# 2 args should set the  month and yuear
+# 3 user specified both month and year
+elif args == 3:
+    month = int(sys.argv[1])
+    year = int(sys.argv[2])
+
 else:
-    print("Error: Not in correct format of '14_cal.py month year'")
-if month < 1 or month > 12:
-    print("Error: Invalid month!")
+    # User did not provide data in the format specified
+    print("Error: Format needed is : 14_cal.py [month here] [year here]")
     exit(0)
 
 tc = calendar.TextCalendar()
