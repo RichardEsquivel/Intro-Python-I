@@ -20,10 +20,17 @@ with open('foo.txt') as file:
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE the w commands writes to text
-with open("bar.txt", "w") as file:
-    file.write("Man text is fun! \n")
-    file.write("Still super fun!!! \n")
-    file.write("Getting less fun now.... \n")
+# with open("bar.txt", "w") as file:
+#     file.write("Man text is fun! \n")
+#     file.write("Still super fun!!! \n")
+#     file.write("Getting less fun now.... \n")
+writearoo = open('bar.txt', 'w+')
+lines = ('slayer', 'megadeth', 'metallica')
+for line in lines:
+    writearoo.write(f'{line} \n')
+# read_lines = writearoo.read()
+# print(file.read_lines)
+# writearoo.close()
 
 # now will look at what we wrote by printing it out.
 with open("bar.txt") as file:
